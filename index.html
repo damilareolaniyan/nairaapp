@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<title>Naira Converter</title>
+
+	<style>
+		body{
+			background: skyblue;
+			margin-top: 70px;
+			color: white;
+		}
+		h6{
+			padding-top: 30px;
+		}
+		form{
+			padding-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+	<div class="col-md-6 offset-md-3">
+	<h3 class="display-4 text-center mb-3">Naira Converter&reg;</h3>
+	<form>
+		<div class="form-group">
+			<input id="curInput" class="form-control form-control-lg" type="number" placeholder="Enter Naira">
+		</div>
+	</form>
+	<div id="output">
+		<div class="card bg-success mb-2">
+			<div class="card-block">
+				<h5>Pounds:</h5>
+				<div id="poundOutput"></div>
+			</div>
+		</div>
+
+		<div class="card bg-danger mb-2">
+			<div class="card-block">
+				<h5>USD:</h5>
+				<div id="usdOutput"></div>
+			</div>
+		</div>
+
+		<div class="card bg-primary mb-2">
+			<div class="card-block">
+				<h5>Euro:</h5>
+				<div id="euroOutput"></div>
+			</div>
+		</div>
+
+		<div class="card bg-warning">
+			<div class="card-block">
+				<h5>Yen:</h5>
+				<div id="yenOutput"></div>
+			</div>
+		</div>
+		<form>
+		<div class="form-group">
+			<input id="txtInput" class="form-control form-control-lg" type="text-area" placeholder="What you can do with the amount you enter">
+		</div>
+	</form>
+	</div>
+	</div>		
+	</div>
+	
+	<h6 class="display-6 text-center mb-2">Copyright&copy; 2019 || Olaniyan Damilare</h4>
+</div>
+
+<script>
+	document.getElementById('curInput').addEventListener('input', function(e){
+		let cur = e.target.value;
+		document.getElementById('usdOutput').innerHTML= cur*365;
+		document.getElementById('poundOutput').innerHTML= cur*450;
+		document.getElementById('yenOutput').innerHTML= cur*99;
+		document.getElementById('euroOutput').innerHTML= cur*500;
+
+		
+	});
+
+</script>
+</body>
+</html>
